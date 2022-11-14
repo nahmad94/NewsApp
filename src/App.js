@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react'
 import Header from './Components/Header'
 import Headlines from './Components/Headlines'
+import Article from './Components/Article'
 
 const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=15a205e299d84a7ca189f836671e2bd8'
 
@@ -27,15 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <Headlines data={ data }/>
-      {/* <div>
-        {data.map((element, index) => {
-          return(
-            <div key={index}>
-              <img src={element.urlToImage}></img>
-              {element.title}</div>
-          )
-        })}
-      </div> */}
+      <Article />
     </div>
   );
 }

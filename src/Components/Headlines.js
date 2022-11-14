@@ -3,8 +3,7 @@ import React from 'react'
 export default function Headlines(props) {
     console.log('test')
   return (
-    <div>
-        <div>Headlines</div>
+    <div className='headlines'>
         {props.data.map((element, index) => {
             return(
             <div key={index}>

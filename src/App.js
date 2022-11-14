@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <Headlines data={ data }/>
-      <Article />
+      <Article data={data}/>
     </div>
   );
 }

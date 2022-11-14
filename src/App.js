@@ -21,12 +21,13 @@ function App() {
     })
   }, [])
 
-  console.log(data)
+  // handleClick
   
   return (
     <div className="App">
       <Header />
-      <div>
+      <Headlines data={ data }/>
+      {/* <div>
         {data.map((element, index) => {
           return(
             <div key={index}>
@@ -34,7 +35,7 @@ function App() {
               {element.title}</div>
           )
         })}
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -10,6 +10,8 @@ export default function Headlines(props) {
                     {element.title}
                     {element.author}
                     {element.content}
+                    <p>Read the full article at</p>
+                    <a href={element.url} target='blank'>Link</a>
                 </div>
             )
         })}

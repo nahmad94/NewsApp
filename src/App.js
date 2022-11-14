@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Headlines data={ data }/>
+      <Headlines data={data}/>
       <Article data={data}/>
     </div>
   );

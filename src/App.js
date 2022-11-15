@@ -4,6 +4,7 @@ import {Route, Routes, Link} from 'react-router-dom'
 import Header from './Components/Header'
 import Headlines from './Components/Headlines'
 import Article from './Components/Article'
+import Footer from './Components/Footer'
 
 const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=15a205e299d84a7ca189f836671e2bd8'
 
@@ -22,23 +23,21 @@ function App() {
       setData(json.articles)
     })
   }, [])
-
-  // handleClick
   
   return (
     <div className="App">
       <nav>
         <Link to='/'>
-          <h1>NewsApp Nav</h1>
+          <Header />
         </Link>
       </nav>
-      {/* <Headlines data={data} /> */}
       <main>
         <Routes>
           <Route path='/' element={ <Headlines data={data}/>} />
           <Route path='article/:articleNumber' element={ <Article data={data} />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

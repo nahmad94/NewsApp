@@ -16,7 +16,7 @@ export default function Headlines(props) {
                 <div>
                     <h1>{article[0].title}</h1>
                     <h2>{article[0].author}</h2>
-                    <p>{article[0].content}</p>
+                    <p>{article[0].description}</p>
                     <div>
                         <p>Read the full article at</p>
                         <a href={article[0].url} target='blank'>Link</a>

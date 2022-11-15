@@ -6,3 +6,36 @@ img {
   width: 100px;
   height: 100px;
 }
+
+.headlines {
+  display: flex wrap;
+  width: auto;
+}
+
+.headline {
+  border: 1px solid black;
+  margin: 5px;
+}
+/* 
+.footnote {
+  background: black;
+  margin: 0px;
+  padding: 0px;
+} */
+
+.navbar {
+  margin: 0px;
+  margin-bottom: 5px;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+/* 
+.header {
+  margin-bottom: 0px;
+  margin-top: 0px;
+} */
+
+.footer {
+  display: absolute;
+}

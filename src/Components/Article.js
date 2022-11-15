@@ -14,11 +14,13 @@ export default function Headlines(props) {
     <div className='headlines'>
         {/* {props.data.filter((element, index) => { */}
                 <div>
-                    {article[0].title}
-                    {article[0].author}
-                    {article[0].content}
-                    <p>Read the full article at</p>
-                    <a href={article[0].url} target='blank'>Link</a>
+                    <h1>{article[0].title}</h1>
+                    <h2>{article[0].author}</h2>
+                    <p>{article[0].content}</p>
+                    <div>
+                        <p>Read the full article at</p>
+                        <a href={article[0].url} target='blank'>Link</a>
+                    </div>
                 </div>
          {/* })}  */}
     </div>

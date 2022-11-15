@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Headlines(props) {
-    console.log('test')
   return (
-    
         <div className='headlines'>
             {props.data.map((element, index) => {
                 return(

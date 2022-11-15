@@ -5,7 +5,6 @@ export default function Headlines(props) {
     let {articleNumber} = useParams();
     articleNumber = parseInt(articleNumber);
     let article = props.data.filter((element, index) => index === articleNumber) 
-    console.log(article)
   return (
     <div className='headlines'>
                 <div>

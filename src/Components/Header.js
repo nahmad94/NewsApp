@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className='navbar'>
         <nav className='footnote'>
-            <h1 className='header'>News App</h1>
+            <h1 className='header'>NewsApp</h1>
         </nav>
     </div>
   )

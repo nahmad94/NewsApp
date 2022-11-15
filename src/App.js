@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react'
+import {Route, Routes, Link} from 'react-router-dom'
 import Header from './Components/Header'
 import Headlines from './Components/Headlines'
 import Article from './Components/Article'
@@ -26,9 +27,18 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
-      <Headlines data={data}/>
-      <Article data={data}/>
+      <nav>
+        <Link to='/'>
+          <h1>NewsApp Nav</h1>
+        </Link>
+      </nav>
+      {/* <Headlines data={data} /> */}
+      <main>
+        <Routes>
+          <Route path='/' element={ <Headlines data={data}/>} />
+          <Route path='article/:articleNumber' element={ <Article data={data} />} />
+        </Routes>
+      </main>
     </div>
   );
 }

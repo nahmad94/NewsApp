@@ -8,7 +8,7 @@ export default function Header() {
         <nav className='footnote'>
             <h1 className='header'>NewsApp</h1>
             <Link to='/Search'>
-              <Search />
+              <div>Search the News</div>
             </Link>
         </nav>
     </div>

@@ -20,6 +20,7 @@ export default function Search() {
   return (
     <div>
         <div>Search NewsApp</div>
+        <input type='text'></input>
         <div> This area is under construction</div>
         <div>Please note that search will take you off site to the main article source.</div>
         {searchResults.map((element, index) => {

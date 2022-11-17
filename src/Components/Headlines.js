@@ -7,7 +7,7 @@ export default function Headlines(props) {
             {props.data.map((element, index) => {
                 return(
                     <>
-                        <Link to={`/article/${index}`}>
+                        <Link to={`article/${index}`}>
                             <div className='headline'  key={index}>
                                 <img src={element.urlToImage}></img>
                                 <div>{element.title}</div>

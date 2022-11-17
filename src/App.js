@@ -40,13 +40,13 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to='/'>
+        <Link to=''>
           <Header />
         </Link>
       </nav>
       <main>
         <Routes>
-          <Route path='/' element={ <Headlines data={data}/>} />
+          <Route path='' element={ <Headlines data={data}/>} />
           <Route path='article/:articleNumber' element={ <Article data={data} />} />
           <Route path='/Search' element={ <Search searchResults={searchResults} setSearchResults={setSearchResults}/> } />
         </Routes>

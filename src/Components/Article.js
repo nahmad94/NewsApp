@@ -8,7 +8,7 @@ export default function Headlines(props) {
     let article = props.data.filter((element, index) => index === articleNumber) 
   return (
     <div className='headlines'>
-                <div>
+                <div >
                     <h1>{article[0].title}</h1>
                     <img src={article[0].urlToImage}></img>
                     <div>

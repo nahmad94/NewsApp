@@ -4,8 +4,8 @@
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .headlines {
@@ -19,6 +19,8 @@ img {
   padding: 15px;
   width: 25%;
   display: inline-block;
+  color: black;
+  background-color: white;
 }
 
 .navbar {

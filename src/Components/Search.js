@@ -12,14 +12,22 @@ export default function Search() {
         })
         .then((res) => res.json())
         .then((json) => {
-          setSearchResults(json)
+          setSearchResults(json.articles)
         })
       }, [])
-      console.log(searchResults.articles)
+      console.log(searchResults)
   return (
     <div>
         <div>Search NewsApp</div>
         <div> This area is under construction</div>
+        {searchResults.map((element, index) => {
+            return(
+                <div>
+                    <h1>{element.title}</h1>
+                    <h3>{element.author}</h3>
+                </div>
+            )
+        })}
     </div>
 
   )

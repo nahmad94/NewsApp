@@ -31,3 +31,11 @@ img {
 .footer {
   display: absolute;
 }
+
+.search {
+  margin: 0px;
+  margin-bottom: 5px;
+  padding: 0px;
+  background: black;
+  color: blue;
+}

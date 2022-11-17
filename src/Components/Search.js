@@ -38,11 +38,10 @@ export default function Search({searchResults, setSearchResults }) {
             <input type='submit' value="Submit"/>
         </form>
         <div>{searchInput}</div>
-        <div> This area is under construction</div>
-        <div>Please note that search will take you off site to the main article source.</div>
+        <div>Please note that search results will take you off site to the main article source.</div>
         {searchResults.map((element, index) => {
             return(
-                <div>
+                <div key ={index}>
                     <a href={element.url}>
                     <div>
                         <h1>{element.title}</h1>

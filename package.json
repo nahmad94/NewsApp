@@ -1,7 +1,7 @@
 {
   "name": "newsapp",
+  "homepage": "https://news-mh7iog9d3-nahmad94.vercel.app/",
   "version": "0.1.0",
-  "homepage": "https://nahmad94.github.io/NewsApp",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

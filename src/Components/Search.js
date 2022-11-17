@@ -21,6 +21,7 @@ export default function Search() {
     <div>
         <div>Search NewsApp</div>
         <div> This area is under construction</div>
+        <div>Please note that search will take you off site to the main article source.</div>
         {searchResults.map((element, index) => {
             return(
                 <div>

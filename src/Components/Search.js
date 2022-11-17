@@ -24,12 +24,12 @@ export default function Search() {
         {searchResults.map((element, index) => {
             return(
                 <div>
-                    <Link to={element.url}>
+                    <a href={element.url}>
                     <div>
                         <h1>{element.title}</h1>
                         <h3>{element.author}</h3>
                     </div>
-                    </Link>
+                    </a>
                 </div>
             )
         })}

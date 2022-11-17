@@ -7,7 +7,9 @@ import Article from './Components/Article'
 import Footer from './Components/Footer'
 import Search from './Components/Search'
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=15a205e299d84a7ca189f836671e2bd8'
+const key1 = '15a205e299d84a7ca189f836671e2bd8'
+const key2 = '0d269e6f0417477eb8b17c0748637aba'
+const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key1;
 // let searchInput = ''
 
 function App() {

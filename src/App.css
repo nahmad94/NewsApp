@@ -39,3 +39,11 @@ img {
   background: black;
   color: blue;
 }
+
+.articleLink {
+  display: inline;
+}
+
+.results {
+  display: inline;
+}

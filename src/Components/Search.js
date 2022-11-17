@@ -31,16 +31,17 @@ export default function Search({searchResults, setSearchResults }) {
                 <input type='text' onChange={handleChange}></input>
                 <input type='submit' value="Submit"/>
             </form>
+            <br />
             <div>Please note that search results will take you off site to the main article source.</div>
+            <br />
             {searchResults.map((element, index) => {
                 return(
-                    <div key ={index}>
+                    <div key ={index} className='results'>
                         <a href={element.url}>
-                        <div>
-                            <h1>{element.title}</h1>
-                            <h3>{element.author}</h3>
-                        </div>
+                            <p>{element.title}</p>
                         </a>
+                        <p>by {element.author}</p>
+
                     </div>
                 )
             })}

@@ -10,7 +10,7 @@ export default function Headlines(props) {
                         <Link to={`/article/${index}`}>
                             <div className='headline'  key={index}>
                                 <img src={element.urlToImage}></img>
-                                {element.title}
+                                <div>{element.title}</div>
                             </div>
                         </Link>
                     </>

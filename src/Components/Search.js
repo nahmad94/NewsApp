@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 
-export default function Search() {
-    const searchURL = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey=15a205e299d84a7ca189f836671e2bd8'
-    let [searchResults, setSearchResults] = useState([]);
-    useEffect(() => {
+export default function Search({searchResults, setSearchResults }) {
+    const [searchInput, setSearchInput] = useState('')
+    const searchURL = `https://newsapi.org/v2/everything?q=${searchInput}&apiKey=15a205e299d84a7ca189f836671e2bd8`
+    
+    const fetchSearch = () => { 
         fetch(searchURL, {
           method: 'GET',
           headers: {
@@ -15,12 +16,28 @@ export default function Search() {
         .then((json) => {
           setSearchResults(json.articles)
         })
-      }, [])
+    }
+
+    useEffect(() => {}, [searchResults])
+
+      function handleChange(e) {
+        setSearchInput(e.target.value)
+      }
+      console.log(searchInput)
+      function handleSubmit(e) {
+        e.preventDefault();
+        fetchSearch();
+      }
+
       console.log(searchResults)
   return (
     <div>
         <div>Search NewsApp</div>
-        <input type='text'></input>
+        <form onSubmit={handleSubmit} >
+            <input type='text' onChange={handleChange}></input>
+            <input type='submit' value="Submit"/>
+        </form>
+        <div>{searchInput}</div>
         <div> This area is under construction</div>
         <div>Please note that search will take you off site to the main article source.</div>
         {searchResults.map((element, index) => {

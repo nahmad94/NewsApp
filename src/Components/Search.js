@@ -17,7 +17,6 @@ export default function Search({searchResults, setSearchResults }) {
           setSearchResults(json.articles)
         })
     }
-    console.log(searchResults)
     useEffect(() => {}, [searchResults])
     function handleChange(e) {
         setSearchInput(e.target.value)

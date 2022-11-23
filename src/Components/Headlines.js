@@ -11,7 +11,6 @@ export default function Headlines(props) {
                             <div className='headline'  key={index}>
                                 <img src={element.media}></img>
                                 <div>{element.title}</div>
-                                {/* <div>{}</div> */}
                             </div>
                         </Link>
                     </>

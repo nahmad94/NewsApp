@@ -10,7 +10,7 @@ NewsApp uses the power of [Newscatcher API](https://docs.newscatcherapi.com/) to
 
 - [GitHub Repo](https://github.com/nahmad94/NewsApp)
 - [Deployment](https://news-5s0fktqx7-nahmad94.vercel.app/)
-- [Demo]()
+- [Demo](https://www.loom.com/share/884b1d24232f4125bafb1a609aab8f49)
 
 ## Wireframes & React Component Hierarchy
 

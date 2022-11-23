@@ -62,7 +62,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Adding routes and links | H | 3hrs| 4.5hrs | 4.5hrs |
 | Mapping search results | H | 1hrs| 0.5hrs | 0.5hrs |
 | Styling | H | 3hrs| 2hrs | 2hrs |
-| Total | H | 23hrs| 26hrs | 26hrs |
+| Switching API | H | 0hrs| 8hrs | 8hrs |
+| Total | H | 23hrs| 34hrs | 34hrs |
 
 ## Additional Libraries
 

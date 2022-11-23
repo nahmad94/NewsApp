@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 export default function Headlines(props) {
     let {articleNumber} = useParams();
     articleNumber = parseInt(articleNumber);
-    // console.log(props.data[articleNumber])
     let article = props.data.filter((element, index) => index === articleNumber) 
   return (
     <div className='headlines'>
@@ -17,7 +16,6 @@ export default function Headlines(props) {
                       <h4>Published On: {article[0].clean_url}</h4>
                     </div>
                     <p>{article[0].summary}</p>
-                    {/* <p>{article[0].excerpt}</p> */}
                     <div className='articleLink'>
                         <p>Read the full article at <a href={article[0].link} target='blank'>Link</a></p>
                     </div>

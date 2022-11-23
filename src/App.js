@@ -12,9 +12,13 @@ import Search from './Components/Search'
 // const key2 = '0d269e6f0417477eb8b17c0748637aba'
 // const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + key1;
 
-// MediaStack Api 
-const key = `c65a5f25d2c0c58921fd25e9e95b2c3a`
-const url = `http://api.mediastack.com/v1/`
+// // MediaStack Api 
+// const key = `c65a5f25d2c0c58921fd25e9e95b2c3a`
+// const url = `https://api.mediastack.com/v1/news`
+
+// NewsCatcher Api
+const key = 'DybO10Cxlnyu6fvqDmTjfJW7HgY6sEYxmu9lBwuiPbo';
+const headlineURL = 'https://api.newscatcherapi.com/v2/latest_headlines?countries=US&topic=business'
 
 // let searchInput = ''
 
@@ -22,10 +26,10 @@ function App() {
   let [data, setData] = useState([]);
   let [searchResults, setSearchResults] = useState([]);
   useEffect(() => {
-    fetch(url, {
+    fetch(headlineURL, {
       method: 'GET',
       headers: {
-        accept: 'application/json'
+        'x-api-key': key
       }
     })
     .then((res) => res.json())

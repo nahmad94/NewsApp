@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 export default function Search({searchResults, setSearchResults }) {
     const [searchInput, setSearchInput] = useState('')
-    const searchURL = `https://newsapi.org/v2/everything?q=${searchInput}&apiKey=15a205e299d84a7ca189f836671e2bd8`
+    const searchURL = `https://api.newscatcherapi.com/v2/search?q="${searchInput}"&countries=US&page_size=100`
+    const key = 'DybO10Cxlnyu6fvqDmTjfJW7HgY6sEYxmu9lBwuiPbo';
     const fetchSearch = () => { 
         fetch(searchURL, {
           method: 'GET',
           headers: {
-            accept: 'application/json'
+            'x-api-key': key
           }
         })
         .then((res) => res.json())
@@ -16,6 +17,7 @@ export default function Search({searchResults, setSearchResults }) {
           setSearchResults(json.articles)
         })
     }
+    console.log(searchResults)
     useEffect(() => {}, [searchResults])
     function handleChange(e) {
         setSearchInput(e.target.value)
@@ -37,7 +39,7 @@ export default function Search({searchResults, setSearchResults }) {
             {searchResults.map((element, index) => {
                 return(
                     <div key ={index} className='results'>
-                        <a href={element.url}>
+                        <a href={element.link}>
                             <p>{element.title}</p>
                         </a>
                         <p>by {element.author}</p>

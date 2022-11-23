@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NewsApp is a lean, no-frills app built using Reactjs to help users stay up to date with events around the world!
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+NewsApp uses the power of [Newscatcher API](https://docs.newscatcherapi.com/) to bring the news from around the world to your desktop.  
 
-### `npm start`
+## Project Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [GitHub Repo](https://github.com/nahmad94/NewsApp)
+- [Deployment](https://news-5s0fktqx7-nahmad94.vercel.app/)
+- [Demo]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Wireframes & React Component Hierarchy
 
-### `npm test`
+Upload images of wireframes and component hierarchy to cloudinary (or similar) and add the link here with a description of the specific wireframe.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Wireframes and Component heirarchy](https://photos.google.com/share/AF1QipOt4VHLKQ7uPjLhB7sL0v1Pj21JM98BaPXDO224rX8rd_tDft8zlDvnRjBxgGbs0w?key=ZC1oYVJzRjQzdXRtRUN0bk1abFRadmxsbzVzWWlB)
 
-### `npm run build`
+### MVP/PostMVP
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decide what is placed into your MVP as the "client" will expect this functionality to be implemented upon project completion.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### MVP 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Create a news app with top stories from around the world
+- Header with logo linking to Homepage
+- Articles displayed under header
+- Click articles to pull up full article
 
-### `npm run eject`
+#### PostMVP 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Adding search functionality
+- Search news by keywords 
+- Search news by country
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Component | Description | 
+| --- | :---: |  
+| App | This will make the initial data pull and include React Router | 
+| Header | This will render the header, including the nav | 
+| Footer | This will render the footer | 
+| Headlines | This will render the home page headlines | 
+| Article | This will render the individual articles | 
+| Search | This will let you search for news and display results | 
 
-## Learn More
+## Time Frames
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Time frames are also key in the development cycle.  You have limited time to code all phases of the project.  Your estimates can then be used to evaluate project possibilities based on time needed and the actual time you have before the project must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Selecting/Testing API | H | 4hrs| 5hrs | 5hrs |
+| Creating basic components | H | 3hrs| 1.5hrs | 1.5hrs |
+| Creating headlines for mainpage | H | 3hrs| 5hrs | 5hrs |
+| Creating search input | H | 2hrs| 2.5hrs | 2.5hrs |
+| Adding state | H | 3hrs| 5hrs | 5hrs |
+| Adding routes and links | H | 3hrs| 4.5hrs | 4.5hrs |
+| Mapping search results | H | 1hrs| 0.5hrs | 0.5hrs |
+| Styling | H | 3hrs| 2hrs | 2hrs |
+| Total | H | 23hrs| 26hrs | 26hrs |
 
-### Code Splitting
+## Additional Libraries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This project does not require any additional libraries. 
 
-### Analyzing the Bundle Size
+## Code Snippet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  Code snippet should not be greater than 10 lines of code. 
 
-### Making a Progressive Web App
+```
+const fetchSearch = () => { 
+        fetch(searchURL, {
+          method: 'GET',
+          headers: {
+            'x-api-key': key
+          }
+        })
+        .then((res) => res.json())
+        .then((json) => {
+          setSearchResults(json.articles)
+        })
+    }
+    useEffect(() => {}, [searchResults])
+    function handleChange(e) {
+        setSearchInput(e.target.value)
+    }
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This snippet of code is used to set the search parameters and fetch news related to that input. 
 
-### Advanced Configuration
+## Issues and Resolutions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Had issues with my first API not working on deployment. Switched to the NewsCatcher API as workaround. 
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

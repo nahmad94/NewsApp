@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 export default function Search({searchResults, setSearchResults }) {
     const [searchInput, setSearchInput] = useState('')
     const searchURL = `https://api.newscatcherapi.com/v2/search?q="${searchInput}"&countries=US&page_size=100`
-    const key = 'DybO10Cxlnyu6fvqDmTjfJW7HgY6sEYxmu9lBwuiPbo';
+    // const key = 'DybO10Cxlnyu6fvqDmTjfJW7HgY6sEYxmu9lBwuiPbo';
+    const key = '7ayMQLhy33A9lPZzNSgTnMhdkGonh7cW-zrKiaMvWlc'
     const fetchSearch = () => { 
         fetch(searchURL, {
           method: 'GET',

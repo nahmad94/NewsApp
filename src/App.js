@@ -9,7 +9,8 @@ import Search from './Components/Search'
 
 // NewsCatcher Api
 // const key = 'DybO10Cxlnyu6fvqDmTjfJW7HgY6sEYxmu9lBwuiPbo';
-const key = '7ayMQLhy33A9lPZzNSgTnMhdkGonh7cW-zrKiaMvWlc'
+// const key = '7ayMQLhy33A9lPZzNSgTnMhdkGonh7cW-zrKiaMvWlc'
+const key = '81Ntaip7kgNy-cZPBNpzfWRhCOjjnIDj5jnuWlAgCkQ'
 const headlineURL = 'https://api.newscatcherapi.com/v2/latest_headlines?countries=US&topic=business'
 
 function App() {
